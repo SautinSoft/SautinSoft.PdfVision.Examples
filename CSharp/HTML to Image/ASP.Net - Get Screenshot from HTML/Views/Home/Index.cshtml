@@ -1,0 +1,38 @@
+﻿@model ASP.GetScreenShot.Models.ConverterOptions
+@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>PDF Vision .Net - MVC app</title>
+	<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+	<h5 class="bg-primary text-white text-center m-2 p-2">Converter Options</h5>
+	<form asp-action="GetScreenshot" method="post" target="_blank" class="m-2">
+		<div class="form-group">
+			<label asp-for="HtmlAddress">HTML Address:</label>
+			<input asp-for="HtmlAddress" class="form-control" />
+		</div>
+		<div class="form-group">
+			<label asp-for="ViewPortWidth">ViewPort width, px:</label>
+			<input asp-for="ViewPortWidth" class="form-control" />
+		</div>
+		<div class="form-group">
+			<label asp-for="ViewPortHeight">ViewPort height, px:</label>
+			<input asp-for="ViewPortHeight" class="form-control" />
+		</div>
+		<div class="form-group">
+			<label asp-for="FullPage">Take screenshot of the full scrollable page:</label>
+			<input type="checkbox" asp-for="FullPage" />
+		</div>
+		<div class="form-group">
+			<label asp-for="ImageFormat">Image format:</label>
+			<select asp-for="ImageFormat" asp-items="Html.GetEnumSelectList<SautinSoft.PdfVision.ScreenshotType>()"></select>
+		</div>		
+		<button type="submit" class="btn btn-primary mt-3 text-center">Get Screenshot</button>		
+	</form>
+</body>
+</html>

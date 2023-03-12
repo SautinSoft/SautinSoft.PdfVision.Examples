@@ -1,0 +1,30 @@
+﻿@model ASP.NetHtmlToPdf.Models.ConverterOptions
+@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>PDF Vision .Net - MVC app</title>
+	<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+	<h5 class="bg-primary text-white text-center m-2 p-2">Converter Options</h5>
+	<form asp-action="ConvertToPdf" method="post" class="m-2" target="_blank">
+		<div class="form-group">
+			<label asp-for="HtmlAddress">HTML Address:</label>
+			<input asp-for="HtmlAddress" class="form-control" />
+		</div>
+		<div class="form-group">
+			<label asp-for="PaperType">Page Size:</label>
+			<select asp-for="PaperType" class="form-control" asp-items="Html.GetEnumSelectList<SautinSoft.PdfVision.PaperType>()"></select>
+		</div>
+		<div class="form-group">
+			<label asp-for="Orientation">Page Orientation:</label>
+			<select asp-for="Orientation" class="form-control" asp-items="Html.GetEnumSelectList<SautinSoft.PdfVision.Orientation>()"></select>
+		</div>		
+		<button type="submit" class="btn btn-primary mt-3 text-center">Convert to PDF</button>		
+	</form>
+</body>
+</html>

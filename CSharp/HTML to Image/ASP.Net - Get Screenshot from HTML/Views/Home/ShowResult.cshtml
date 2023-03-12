@@ -1,0 +1,18 @@
+﻿@model ASP.GetScreenShot.Models.ImageBase64
+@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Get Screenshot result</title>
+	<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body class="bg-success">	
+	<div class="container m-2">
+		<div>Image Format: @Model?.Format.</div>	
+		<img class="img-fluid" src="@String.Format("data:image/{0};base64,{1}", Model?.Format, Model?.Data)" />
+	</div>
+</body>
+</html>
