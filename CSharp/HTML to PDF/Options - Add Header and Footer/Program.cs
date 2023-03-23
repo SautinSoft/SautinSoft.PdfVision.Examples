@@ -36,11 +36,6 @@ namespace Sample
                 Scale = 1
             };
 
-            // Unpack portable Chromium browser if necessary.
-            // To use portable Chromium add Nuget package:  SautinSoft.PdfVision.Chromium.Windows. (Linux, MacOS).
-            if (!ChromiumEngine.IsExist(options.ChromiumBaseDirectory))
-                ChromiumEngine.Unpack(options.ChromiumBaseDirectory);
-
             // Add page header:
             // 1. Increase top margin to fit header.
             options.PageSetup.PageMargins.Top += LengthUnitConverter.ToPoint(40, LengthUnit.Millimeter);

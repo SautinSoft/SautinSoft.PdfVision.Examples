@@ -35,11 +35,6 @@ namespace Sample
                 Scale = 1
             };
 
-            // Unpack portable Chromium browser if necessary.
-            // To use portable Chromium add Nuget package:  SautinSoft.PdfVision.Chromium.Windows. (Linux, MacOS).
-            if (!ChromiumEngine.IsExist(options.ChromiumBaseDirectory))
-                ChromiumEngine.Unpack(options.ChromiumBaseDirectory);
-
             try
             {
                 v.ConvertHtmlToPdf(inpFile, outFile, options);

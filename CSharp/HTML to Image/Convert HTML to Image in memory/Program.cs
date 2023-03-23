@@ -37,11 +37,6 @@ namespace Sample
                 // BaseUrl = @"The_Absolute_Path_to_Image"
             };
 
-            // Unpack portable Chromium browser if necessary.
-            // To use portable Chromium add Nuget package:  SautinSoft.PdfVision.Chromium.Windows. (Linux, MacOS).
-            if (!ChromiumEngine.IsExist(options.ChromiumBaseDirectory))
-                ChromiumEngine.Unpack(options.ChromiumBaseDirectory);
-
             try
             {
                 // The whole conversion process will be done completely in memory.
