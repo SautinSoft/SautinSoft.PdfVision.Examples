@@ -29,12 +29,6 @@ Namespace Sample
 				.Scale = 1D
 			}
 
-			' Unpack portable Chromium browser if necessary.
-            ' To use portable Chromium add Nuget package:  SautinSoft.PdfVision.Chromium.Windows. (Linux, MacOS).
-			If Not ChromiumEngine.IsExist(options.ChromiumBaseDirectory) Then
-				ChromiumEngine.Unpack(options.ChromiumBaseDirectory)
-			End If
-
 			' Let's set page numbering in the page header (we can do the same in footer):
 			' P.S. the property 'Footer' works only in licensed version.
 

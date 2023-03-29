@@ -5,7 +5,7 @@
 
 [SautinSoft.PdfVision](https://sautinsoft.com/products/pdf-vision/) is .NET assembly which gives API to convert HTML to PDF; take screenshots from HTML; convert Images (TIFF, PNG, JPEG, BMP) to PDF.
 
-## Quick links
+## Quick links 1
 
 + [Developer Guide](https://sautinsoft.com/products/pdf-vision/examples/)
 + [API Reference](https://sautinsoft.net/help/png-bmp-jpeg-html-tiff-to-pdf-net/html/N_SautinSoft_PdfVision.htm)

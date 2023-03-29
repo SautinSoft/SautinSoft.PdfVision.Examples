@@ -35,12 +35,6 @@ namespace ASP.NetHtmlToPdf.Controllers
             ho.PageSetup.PaperType = co.PaperType;
             ho.PageSetup.Orientation = co.Orientation;
 
-            // Unpack portable Chromium browser if necessary.
-            // To use portable Chromium add Nuget package:  SautinSoft.PdfVision.Chromium.Windows. (Linux, MacOS).
-            if (!ChromiumEngine.IsExist(ho.ChromiumBaseDirectory))
-                ChromiumEngine.Unpack(ho.ChromiumBaseDirectory);
-
-
             byte[] pdf = v.ConvertHtmlToPdf(co.HtmlAddress, ho);
             return new FileContentResult(pdf, "application/pdf");
         }

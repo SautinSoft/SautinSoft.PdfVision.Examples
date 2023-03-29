@@ -29,12 +29,6 @@ Namespace Sample
 				.Scale = 1
 			}
 
-			' Unpack portable Chromium browser if necessary.
-            ' To use portable Chromium add Nuget package:  SautinSoft.PdfVision.Chromium.Windows. (Linux, MacOS).
-			If Not ChromiumEngine.IsExist(options.ChromiumBaseDirectory) Then
-				ChromiumEngine.Unpack(options.ChromiumBaseDirectory)
-			End If
-
 			Try
 				Dim pdfCollection As New List(Of Byte())()
 				For Each inpFile As String In inpFiles

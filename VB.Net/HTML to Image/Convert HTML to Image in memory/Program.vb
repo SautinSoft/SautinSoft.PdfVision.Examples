@@ -33,13 +33,6 @@ Namespace Sample
 			' LocalPath - C:/example/ Or C:/example/contact
 			' BaseUrl = @"The_Absolute_Path_to_Image"
 
-			' Unpack portable Chromium browser if necessary.
-            ' To use portable Chromium add Nuget package:  SautinSoft.PdfVision.Chromium.Windows. (Linux, MacOS).
-			If Not ChromiumEngine.IsExist(options.ChromiumBaseDirectory) Then
-				ChromiumEngine.Unpack(options.ChromiumBaseDirectory)
-			End If
-
-
 			Try
 				' The whole conversion process will be done completely in memory.
 				imgBytes = v.GetScreenshot(inpHtml, options)
