@@ -1,22 +1,22 @@
 ![Nuget](https://img.shields.io/nuget/v/SautinSoft.PdfVision) ![Nuget](https://img.shields.io/nuget/dt/SautinSoft.PdfVision) 
 # .NET SDK to convert HTML, ASPX, URL to PDF and Images to PDF
 
-<img src="https://www.sautinsoft.com/media/github/v.png" alt="SautinSoft.PdfVision" align="left" />
+![SautinSoft.PDFVision](https://camo.githubusercontent.com/cc2eec5de5e95c29016fc2410d99e1ca9095b35d6895b5e1e42dff7602273f53/68747470733a2f2f7777772e73617574696e736f66742e636f6d2f6d656469612f6769746875622f762e706e67)
 
-[SautinSoft.PdfVision](https://sautinsoft.com/products/pdf-vision/) is .NET assembly which gives API to convert HTML to PDF; take screenshots from HTML; convert Images (TIFF, PNG, JPEG, BMP) to PDF.
+[SautinSoft.PdfVision](https://sautinsoft.com/products/pdf-vision/) is .NET assembly (SDK) which gives API to convert HTML, ASPX to PDF and Image, JPG, Multipages TIFF to PDF.
 
-## Quick links 1
+## Quick links
 
-+ [Developer Guide](https://sautinsoft.com/products/pdf-vision/examples/)
-+ [API Reference](https://sautinsoft.net/help/png-bmp-jpeg-html-tiff-to-pdf-net/html/N_SautinSoft_PdfVision.htm)
++ [Developer Guide](https://sautinsoft.com/products/pdf-vision/help/net/)
++ [API Reference](https://sautinsoft.com/products/pdf-vision/help/net/api-reference/html/N_SautinSoft_PdfVision.htm)
 
 ## Top Features
 
-+ [Convert HTML file to PDF file.](https://sautinsoft.com/products/pdf-vision/examples/convert-html-file-to-pdf-file-csharp-vb-net.php)
-+ [Convert Web-site (URL) to PDF file.](https://sautinsoft.com/products/pdf-vision/examples/convert-web-site-url-to-pdf-file-csharp-vb-net.php)
-+ [Convert Images to PDF file.](https://sautinsoft.com/products/pdf-vision/examples/convert-image-class-to-pdf-file-csharp-vb-net.php)
-+ [Convert HTML file to Image file.](https://sautinsoft.com/products/pdf-vision/examples/convert-html-file-to-image-file-csharp-vb-net.php)
-+ [Merge PDF files into one PDF file.](https://sautinsoft.com/products/pdf-vision/examples/merge-pdf-files-csharp-vb-net.php)
++ [Convert HTML file to PDF file.](https://sautinsoft.com/products/pdf-vision/help/net/developer-guide/convert-html-file-to-pdf-file-csharp-vb-net.php)
++ [Convert Web-site (URL) to PDF file.](https://sautinsoft.com/products/pdf-vision/help/net/developer-guide/convert-web-site-url-to-pdf-file-csharp-vb-net.php)
++ [Convert Images to PDF file.](https://sautinsoft.com/products/pdf-vision/help/net/developer-guide/convert-image-class-to-pdf-file-csharp-vb-net.php)
++ [Convert HTML file to Image file.](https://sautinsoft.com/products/pdf-vision/help/net/developer-guide/convert-html-file-to-image-file-csharp-vb-net.php)
++ [Merge PDF files into one PDF file.](https://sautinsoft.com/products/pdf-vision/help/net/developer-guide/merge-pdf-files-csharp-vb-net.php)
 
 ## System Requirement
 
@@ -35,13 +35,10 @@ Are you ready to give PDF Vision .NET a try? Simply execute `Install-Package sau
 string inpFile = Path.GetFullPath(@"..\..\Sample.html");
 string outFile = new FileInfo("Result.pdf").FullName;
 
+// Local chromium will be downloaded into this directory.
+// This takes time only at the first startup.
+string chromiumDirectory = new DirectoryInfo(@"..\..\..\..\..\..\Local Chromium\").FullName;
 PdfVision v = new PdfVision();
-
-// Unpack portable Chromium browser if necessary.
-// To use portable Chromium add Nuget package:  SautinSoft.PdfVision.Chromium.Windows. (Linux, MacOS).
-if (!ChromiumEngine.IsExist(options.ChromiumBaseDirectory))
-    ChromiumEngine.Unpack(options.ChromiumBaseDirectory);
-
 v.ConvertHtmlToPdf(inpFile, outFile);
 ```
 ## Convert JPG to PDF
@@ -60,14 +57,11 @@ v.ConvertImageToPdf(new string[] {inpFile}, outFile, options);
 string inpFile = Path.GetFullPath(@"..\..\Sample.html");
 string outFile = new FileInfo("Result.png").FullName;
 
+// Local chromium will be downloaded into this directory.
+// This takes time only at the first startup.
+string chromiumDirectory = new DirectoryInfo(@"..\..\..\..\..\..\Local Chromium\").FullName;
 PdfVision v = new PdfVision();
 ScreenshotOptions options = new ScreenshotOptions();
-
-// Unpack portable Chromium browser if necessary.
-// To use portable Chromium add Nuget package:  SautinSoft.PdfVision.Chromium.Windows. (Linux, MacOS).
-if (!ChromiumEngine.IsExist(options.ChromiumBaseDirectory))
-    ChromiumEngine.Unpack(options.ChromiumBaseDirectory);
-
 v.GetScreenshot(inpFile, outFile, options);
 ```
 
@@ -75,8 +69,8 @@ v.GetScreenshot(inpFile, outFile, options);
 
 + **Website:** [www.sautinsoft.com](http://www.sautinsoft.com)
 + **Product Home:** [PDF Vision .Net](https://sautinsoft.com/products/pdf-vision/)
-+ [Download SautinSoft.PDFVision](https://sautinsoft.com/products/pdf-vision/download.php)
-+ [Developer Guide](https://sautinsoft.com/products/pdf-vision/examples/)
-+ [API Reference](https://sautinsoft.net/help/png-bmp-jpeg-html-tiff-to-pdf-net/html/N_SautinSoft_PdfVision.htm)
++ [Download SautinSoft.PDFVision](http://sautinsoft.com/products/pdf-vision/download.php)
++ [Developer Guide](https://sautinsoft.com/products/pdf-vision/help/net/)
++ [API Reference](https://sautinsoft.com/products/pdf-vision/help/net/api-reference/html/N_SautinSoft_PdfVision.htm)
 + [Support Team](https://sautinsoft.com/support.php)
-+ [License](https://sautinsoft.net/help/png-bmp-jpeg-html-tiff-to-pdf-net/html/license.htm)
++ [License](https://sautinsoft.com/products/pdf-vision/help/net/getting-started/agreement.php)
