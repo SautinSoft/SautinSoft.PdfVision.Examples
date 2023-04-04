@@ -35,9 +35,6 @@ Are you ready to give PDF Vision .NET a try? Simply execute `Install-Package sau
 string inpFile = Path.GetFullPath(@"..\..\Sample.html");
 string outFile = new FileInfo("Result.pdf").FullName;
 
-// Local chromium will be downloaded into this directory.
-// This takes time only at the first startup.
-string chromiumDirectory = new DirectoryInfo(@"..\..\..\..\..\..\Local Chromium\").FullName;
 PdfVision v = new PdfVision();
 v.ConvertHtmlToPdf(inpFile, outFile);
 ```
@@ -57,9 +54,6 @@ v.ConvertImageToPdf(new string[] {inpFile}, outFile, options);
 string inpFile = Path.GetFullPath(@"..\..\Sample.html");
 string outFile = new FileInfo("Result.png").FullName;
 
-// Local chromium will be downloaded into this directory.
-// This takes time only at the first startup.
-string chromiumDirectory = new DirectoryInfo(@"..\..\..\..\..\..\Local Chromium\").FullName;
 PdfVision v = new PdfVision();
 ScreenshotOptions options = new ScreenshotOptions();
 v.GetScreenshot(inpFile, outFile, options);
