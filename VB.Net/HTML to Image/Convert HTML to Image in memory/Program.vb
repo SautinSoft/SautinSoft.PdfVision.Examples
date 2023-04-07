@@ -24,7 +24,8 @@ Namespace Sample
 				},
 				.Type = ScreenshotType.Jpeg,
 				.Quality = 90,
-				.BaseUrl = Path.GetDirectoryName(inpFile)
+				.BaseUrl = Path.GetDirectoryName(inpFile),
+				.ChromiumBaseDirectory = Path.GetFullPath("..\..\..\..\..\..\Chromium\")
 			}
 
 			' The baseURL property specifies Or retrieves the base URL used for

@@ -38,11 +38,6 @@ namespace ASP.GetScreenShot.Controllers
             so.FullPage = co.FullPage;
             so.Type = co.ImageFormat;
 
-            // Unpack portable Chromium browser if necessary.
-            // To use portable Chromium add Nuget package:  SautinSoft.PdfVision.Chromium.Windows. (Linux, MacOS).
-            if (!ChromiumEngine.IsExist(so.ChromiumBaseDirectory))
-                ChromiumEngine.Unpack(so.ChromiumBaseDirectory);
-
             byte[] image = v.GetScreenshot(co.HtmlAddress, so);
 
             ImageBase64 model = new ImageBase64()

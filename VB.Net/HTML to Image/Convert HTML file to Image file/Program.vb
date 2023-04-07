@@ -19,7 +19,9 @@ Namespace Sample
 					.Width = 800,
 					.Height = 600
 				},
-				.FullPage = False
+				.FullPage = False,
+				.ChromiumBaseDirectory = Path.GetFullPath("..\..\..\..\..\..\Chromium\")
+
 			}
 
 			Try

@@ -30,7 +30,8 @@ Namespace Sample
 					}
 				},
 				.PrintBackground = True,
-				.Scale = 1D
+				.Scale = 1D,
+				.ChromiumBaseDirectory = Path.GetFullPath("..\..\..\..\..\..\Chromium\")
 			}
 
 			Try

@@ -33,7 +33,10 @@ namespace Sample
                     }
                 },
                 PrintBackground = true,
-                Scale = 1M                
+                Scale = 1,
+				//Set a custom directory where will be placed portable Chromium browser. 
+				//Default value depends of platform (win-x64, win-86, linux-x64 or osx-x64). 
+				ChromiumBaseDirectory = Path.GetFullPath(@"..\..\..\..\..\..\Chromium\")           
             };
 
             // Let's set page numbering in the page header (we can do the same in footer):

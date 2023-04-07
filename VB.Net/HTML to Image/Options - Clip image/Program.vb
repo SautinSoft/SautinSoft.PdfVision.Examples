@@ -21,6 +21,7 @@ Namespace Sample
 					.Height = 1080
 				},
 				.Type = ScreenshotType.Png,
+				.ChromiumBaseDirectory = Path.GetFullPath("..\..\..\..\..\..\Chromium\"),
 				.Clip = New Clip() With {
 					.X = 744,
 					.Y = 525,

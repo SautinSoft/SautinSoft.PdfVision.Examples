@@ -20,7 +20,8 @@ Namespace Sample
 					.Width = 2560,
 					.Height = 1920
 				},
-				.Type = ScreenshotType.Png
+				.Type = ScreenshotType.Png,
+				.ChromiumBaseDirectory = Path.GetFullPath("..\..\..\..\..\..\Chromium\")
 			}
 
 			Try

@@ -15,7 +15,7 @@
 	<PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.2" />
 	<PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
 	<PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="1.1.0" />	
-	<PackageReference Include="SautinSoft.PdfVision.Chromium.Windows" Version="*" />
+	
 	</ItemGroup>
   </When>
   <When Condition="Exists('..\..\..\..\..\Bin\.NET 6.0\SautinSoft.PdfVision.dll')">
@@ -26,13 +26,13 @@
 	<PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.2" />
 	<PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
 	<PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="1.1.0" />
-	<PackageReference Include="SautinSoft.PdfVision.Chromium.Windows" Version="*" />
+	
 	</ItemGroup>
   </When>
   <When Condition="'Nuget'=='Nuget'">
    <ItemGroup>
     <PackageReference Include="SautinSoft.PdfVision" Version="*" />
-	<PackageReference Include="SautinSoft.PdfVision.Chromium.Windows" Version="*" />
+	
    </ItemGroup>
   </When>
  </Choose>

@@ -27,7 +27,10 @@ namespace Sample
                 },
                 // Get only visible part
                 /// Depends of <see cref="ViewPortOptions"/>.
-                FullPage = false
+                FullPage = false,
+				//Set a custom directory where will be placed portable Chromium browser. 
+                //Default value depends of platform (win-x64, win-86, linux-x64 or osx-x64). 
+                ChromiumBaseDirectory = Path.GetFullPath(@"..\..\..\..\..\..\Chromium\")
             };
 
             try

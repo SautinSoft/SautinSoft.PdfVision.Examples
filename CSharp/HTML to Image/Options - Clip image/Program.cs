@@ -28,6 +28,9 @@ namespace Sample
                     Height = 1080
                 },
                 Type = ScreenshotType.Png,
+				//Set a custom directory where will be placed portable Chromium browser. 
+                //Default value depends of platform (win-x64, win-86, linux-x64 or osx-x64). 
+                ChromiumBaseDirectory = Path.GetFullPath(@"..\..\..\..\..\..\Chromium\"),
 
                 // Let's clip the specified area and scale it.
                 Clip = new Clip()

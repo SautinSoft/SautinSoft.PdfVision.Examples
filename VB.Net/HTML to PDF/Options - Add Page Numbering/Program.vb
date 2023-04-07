@@ -26,7 +26,8 @@ Namespace Sample
 					}
 				},
 				.PrintBackground = True,
-				.Scale = 1D
+				.Scale = 1D,
+				.ChromiumBaseDirectory = Path.GetFullPath("..\..\..\..\..\..\Chromium\")
 			}
 
 			' Let's set page numbering in the page header (we can do the same in footer):

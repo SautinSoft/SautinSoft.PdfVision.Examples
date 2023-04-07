@@ -29,12 +29,16 @@ namespace Sample
                 },
                 Type = ScreenshotType.Jpeg,
                 Quality = 90,
-                BaseUrl = Path.GetDirectoryName(inpFile)
+                BaseUrl = Path.GetDirectoryName(inpFile),
                 // The baseURL property specifies or retrieves the base URL used for
                 // relative path resolution with URL script commands that are embedded in media items.
                 // Website - http://example.com/ or http://example.com/contact
                 // LocalPath - C:/example/ or C:/example/contact
                 // BaseUrl = @"The_Absolute_Path_to_Image"
+				
+				//Set a custom directory where will be placed portable Chromium browser. 
+                //Default value depends of platform (win-x64, win-86, linux-x64 or osx-x64). 
+                ChromiumBaseDirectory = Path.GetFullPath(@"..\..\..\..\..\..\Chromium\")
             };
 
             try

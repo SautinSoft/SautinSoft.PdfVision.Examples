@@ -18,7 +18,10 @@ Namespace Sample
 			Dim inpFile As String = "https://sautinsoft.com/"
 			Dim outFile As String = (New FileInfo("Result.pdf")).FullName
 
-			Dim options As New HtmlToPdfOptions()
+			Dim options As New HtmlToPdfOptions() With {
+				.ChromiumBaseDirectory = Path.GetFullPath("..\..\..\..\..\..\Chromium\")
+				}
+
 
 			Try
 				v.ConvertHtmlToPdf(inpFile, outFile, options)

@@ -27,7 +27,10 @@ namespace Sample
                     Width = 2560,
                     Height = 1920                    
                 },
-                Type = ScreenshotType.Png
+                Type = ScreenshotType.Png,
+				//Set a custom directory where will be placed portable Chromium browser. 
+                //Default value depends of platform (win-x64, win-86, linux-x64 or osx-x64). 
+                ChromiumBaseDirectory = Path.GetFullPath(@"..\..\..\..\..\..\Chromium\")
             };
 
             try
