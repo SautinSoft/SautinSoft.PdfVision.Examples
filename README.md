@@ -61,9 +61,9 @@ v.GetScreenshot(inpFile, outFile, options);
 
 ## Resources
 
-+ **Website:** [www.sautinsoft.com](http://www.sautinsoft.com)
++ **Website:** [www.sautinsoft.com](https://www.sautinsoft.com)
 + **Product Home:** [PDF Vision .Net](https://sautinsoft.com/products/pdf-vision/)
-+ [Download SautinSoft.PDFVision](http://sautinsoft.com/products/pdf-vision/download.php)
++ [Download SautinSoft.PDFVision](https://sautinsoft.com/products/pdf-vision/download.php)
 + [Developer Guide](https://sautinsoft.com/products/pdf-vision/help/net/)
 + [API Reference](https://sautinsoft.com/products/pdf-vision/help/net/api-reference/html/N_SautinSoft_PdfVision.htm)
 + [Support Team](https://sautinsoft.com/support.php)
