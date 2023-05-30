@@ -1,41 +1,28 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFrameworks>net48;net6.0</TargetFrameworks>
+  <PackageId>PDF Vision .Net</PackageId>
+  <Authors>Max Sautin</Authors>
+  <Company>SautinSoft</Company>
+  <OutputType>Exe</OutputType>
+  <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
  <Choose>
-  <When Condition="Exists('..\..\..\..\Bin\.NET Framework 4.8\SautinSoft.PdfVision.dll')">
+ <!-- Need to conditionally bring in references for the .NET 6.0 target -->
+  <When Condition="Exists('..\..\..\..\Bin\.NET 6.0\SautinSoft.PdfVision.dll')">
    <ItemGroup>
     <Reference Include="SautinSoft.PdfVision">
-     <HintPath>..\..\..\..\Bin\.NET Framework 4.8\SautinSoft.PdfVision.dll</HintPath>
+    <HintPath>..\..\..\..\Bin\.NET 6.0\SautinSoft.PdfVision.dll</HintPath>
     </Reference>
 	<PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.2" />
 	<PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
 	<PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="1.1.0" />	
-	
-	</ItemGroup>
-	<ItemGroup Condition="'$(TargetFramework)' == 'net48'">
-		<PackageReference Include="System.Net.Http" Version="4.0.0.0" />
+	<PackageReference Include="System.Drawing.Common" Version="4.7.0" />
 	</ItemGroup>
   </When>
-  <When Condition="Exists('..\..\..\..\..\Bin\.NET Framework 4.8\SautinSoft.PdfVision.dll')">
-   <ItemGroup>
-    <Reference Include="SautinSoft.PdfVision">
-     <HintPath>..\..\..\..\..\Bin\.NET Framework 4.8\SautinSoft.PdfVision.dll</HintPath>
-    </Reference>
-	<PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.2" />
-	<PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-	<PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="1.1.0" />
-	
-	</ItemGroup>
-	<ItemGroup Condition="'$(TargetFramework)' == 'net48'">
-		<PackageReference Include="System.Net.Http" Version="4.0.0.0" />	
-	</ItemGroup>
-  </When>
+    <!-- Need to conditionally bring in references for the NuGet target -->
   <When Condition="'Nuget'=='Nuget'">
    <ItemGroup>
     <PackageReference Include="SautinSoft.PdfVision" Version="*" />
-	
    </ItemGroup>
   </When>
  </Choose>
