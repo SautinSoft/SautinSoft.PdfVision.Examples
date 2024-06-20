@@ -12,7 +12,7 @@ namespace Sample
         }
         public static void ConvertAspxToPdfFile()
         {
-            string inpFile = @"https://sautinsoft.net/default.aspx";
+            string inpFile = @"https://sautinsoft.com";
             string outFile = new FileInfo("Result.pdf").FullName;
 
             PdfVision v = new PdfVision();
