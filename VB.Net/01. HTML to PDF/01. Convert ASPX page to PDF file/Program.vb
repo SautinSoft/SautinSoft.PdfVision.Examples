@@ -8,7 +8,7 @@ Namespace Sample
 			ConvertAspxToPdfFile()
 		End Sub
 		Public Shared Sub ConvertAspxToPdfFile()
-			Dim inpFile As String = "https://sautinsoft.net/default.aspx"
+			Dim inpFile As String = "https://sautinsoft.com"
 			Dim outFile As String = (New FileInfo("Result.pdf")).FullName
 
 			Dim v As New PdfVision()
