@@ -11,6 +11,11 @@ Namespace Sample
 		Public Shared Sub ConvertMultipleHtmlToPdfFile()
 			Dim inpFiles() As String = {Path.GetFullPath("..\..\..\1.html"), Path.GetFullPath("..\..\..\2.html")}
 			Dim outFile As String = (New FileInfo("Result.pdf")).FullName
+			' Before starting, we recommend to get a free 100-day key:
+            ' https://sautinsoft.com/start-for-free/
+            
+            ' Apply the key here:
+			' SautinSoft.PdfVision.SetLicense("...");
 
 			Dim v As New PdfVision()
 			

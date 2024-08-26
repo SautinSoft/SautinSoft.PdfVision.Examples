@@ -11,6 +11,11 @@ Namespace Sample
 			' This string will contains our input HTML document.
 			Dim inpHtml As String = File.ReadAllText("..\..\..\example.html")
 			Dim imgBytes() As Byte = Nothing
+			' Before starting, we recommend to get a free 100-day key:
+            ' https://sautinsoft.com/start-for-free/
+            
+            ' Apply the key here:
+			' SautinSoft.PdfVision.SetLicense("...");
 
 			Dim v As New PdfVision()
 			

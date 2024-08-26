@@ -9,6 +9,11 @@ Namespace Sample
 			MergePdfInMemory()
 		End Sub
 		Public Shared Sub MergePdfInMemory()
+		' Before starting, we recommend to get a free 100-day key:
+            ' https://sautinsoft.com/start-for-free/
+            
+            ' Apply the key here:
+			' SautinSoft.PdfVision.SetLicense("...");
 			Dim v As New PdfVision()
 			' The whole merge process will be done in memory.
 			' We're using files only to get input data and show the result.

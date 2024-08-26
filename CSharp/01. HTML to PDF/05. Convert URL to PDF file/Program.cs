@@ -14,6 +14,12 @@ namespace Sample
         {
             string inpFile = @"https://sautinsoft.com/";
             string outFile = new FileInfo("Result.pdf").FullName;
+			// Before starting, we recommend to get a free 100-day key:
+            // https://sautinsoft.com/start-for-free/
+            
+            // Apply the key here:
+			// SautinSoft.PdfVision.SetLicense("...");
+            
 
             PdfVision v = new PdfVision();
             

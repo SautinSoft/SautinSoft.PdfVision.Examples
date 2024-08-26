@@ -12,6 +12,12 @@ namespace Sample
         }
         public static void ConvertHtmlToPdfInMemory()
         {
+			// Before starting, we recommend to get a free 100-day key:
+            // https://sautinsoft.com/start-for-free/
+            
+            // Apply the key here:
+			// SautinSoft.PdfVision.SetLicense("...");
+            
             // This string will contains HTML string with the local image.
             string inpHtml = "<html>\r\n<body>\r\n<p> Hello </p>\r\n<p><img src=\"sautinsoft.png\"/></p>\r\n<p>Bye </p>\r\n</body>\r\n</html>";
             byte[] pdfBytes = null;

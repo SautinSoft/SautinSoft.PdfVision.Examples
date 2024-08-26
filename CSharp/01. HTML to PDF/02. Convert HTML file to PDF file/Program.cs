@@ -12,6 +12,11 @@ namespace Sample
         }
         public static void ConvertHtmlFileToPdfFile()
         {
+			// Before starting, we recommend to get a free 100-day key:
+            // https://sautinsoft.com/start-for-free/
+            
+            // Apply the key here:
+			// SautinSoft.PdfVision.SetLicense("...");
             string inpFile = Path.GetFullPath(@"..\..\..\Sample.html");
             string outFile = new FileInfo("Result.pdf").FullName;
 

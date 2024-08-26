@@ -12,6 +12,11 @@ Namespace Sample
 			' This string will contains HTML string with the local image.
 			Dim inpHtml As String = "<html>" & vbCrLf & "<body>" & vbCrLf & "<p> Hello </p>" & vbCrLf & "<p><img src=""sautinsoft.png""/></p>" & vbCrLf & "<p>Bye </p>" & vbCrLf & "</body>" & vbCrLf & "</html>"
 			Dim pdfBytes() As Byte = Nothing
+			' Before starting, we recommend to get a free 100-day key:
+            ' https://sautinsoft.com/start-for-free/
+            
+            ' Apply the key here:
+			' SautinSoft.PdfVision.SetLicense("...");
 
 			Dim v As New PdfVision()
 			

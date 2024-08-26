@@ -9,10 +9,11 @@ Namespace Sample
 		End Sub
 		Public Shared Sub ProductActivation()
 
-			' Activate your license here
-			PdfVision.SetLicense("1234567890")
-
-			' Place your serial(s) number.
+			' Before starting, we recommend to get a free 100-day key:
+            ' https://sautinsoft.com/start-for-free/
+            
+            ' Apply the key here:
+			' SautinSoft.PdfVision.SetLicense("...");
 			' You will get own serial number(s) after purchasing the license.
 			' If you will have any questions, email us to sales@sautinsoft.com Or ask at online chat https://www.sautinsoft.com.
 

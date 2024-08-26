@@ -13,6 +13,11 @@ namespace Sample
         }
         public static void MergePdfInMemory()
         {
+			// Before starting, we recommend to get a free 100-day key:
+            // https://sautinsoft.com/start-for-free/
+            
+            // Apply the key here:
+			// SautinSoft.PdfVision.SetLicense("...");
             PdfVision v = new PdfVision();
             // The whole merge process will be done in memory.
             // We're using files only to get input data and show the result.

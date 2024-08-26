@@ -9,6 +9,11 @@ Namespace Sample
 			SplitPdfDocument()
 		End Sub
 		Public Shared Sub SplitPdfDocument()
+		' Before starting, we recommend to get a free 100-day key:
+            ' https://sautinsoft.com/start-for-free/
+            
+            ' Apply the key here:
+			' SautinSoft.PdfVision.SetLicense("...");
 			Dim v As New PdfVision()
 
 			Dim inpFile As String = "..\..\..\simple text.pdf"

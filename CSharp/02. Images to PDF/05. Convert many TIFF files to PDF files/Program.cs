@@ -12,6 +12,12 @@ namespace Sample
         }
         public static void ConvertTiffFilesToPdfFiles()
         {            
+		// Before starting, we recommend to get a free 100-day key:
+            // https://sautinsoft.com/start-for-free/
+            
+            // Apply the key here:
+			// SautinSoft.PdfVision.SetLicense("...");
+            
             PdfVision v = new PdfVision();
             string[] inpFiles = Directory.GetFiles(@"..\..\..\", "*.tif*");
             try

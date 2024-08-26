@@ -12,6 +12,11 @@ namespace Sample
         }
         public static void ConvertAspxToPdfFile()
         {
+			// Before starting, we recommend to get a free 100-day key:
+            // https://sautinsoft.com/start-for-free/
+            
+            // Apply the key here:
+			// SautinSoft.PdfVision.SetLicense("...");
             string inpFile = @"https://sautinsoft.com";
             string outFile = new FileInfo("Result.pdf").FullName;
 

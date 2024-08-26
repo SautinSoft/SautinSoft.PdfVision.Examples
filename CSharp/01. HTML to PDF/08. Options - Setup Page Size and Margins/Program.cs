@@ -14,10 +14,15 @@ namespace Sample
         {
             string inpFile = Path.GetFullPath(@"..\..\..\example.html");
             string outFile = new FileInfo("Result.pdf").FullName;
+			// Before starting, we recommend to get a free 100-day key:
+            // https://sautinsoft.com/start-for-free/
+            
+            // Apply the key here:
+			// SautinSoft.PdfVision.SetLicense("...");
+            
 
             PdfVision v = new PdfVision();
             
-
             // Page size: A3 (297 x 420 mm)
             // Orientation: Portrait
             // Margins: Left: 30mm, Top: 15mm, Right: 25mm, Bottom: 15mm.

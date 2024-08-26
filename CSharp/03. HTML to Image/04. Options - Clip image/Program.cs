@@ -15,6 +15,11 @@ namespace Sample
             // This string will contains our input HTML document.
             string inpHtml = File.ReadAllText(@"..\..\..\example.html");
             byte[] imgBytes = null;
+			// Before starting, we recommend to get a free 100-day key:
+            // https://sautinsoft.com/start-for-free/
+            
+            // Apply the key here:
+			// SautinSoft.PdfVision.SetLicense("...");
 
             PdfVision v = new PdfVision();
             
