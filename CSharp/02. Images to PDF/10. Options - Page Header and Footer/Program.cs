@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using SautinSoft.PdfVision;
-using System.Drawing;
 
 namespace Sample
 {
@@ -36,7 +35,7 @@ namespace Sample
             options.PageNumbering.Aligment = HorizontalAlignment.Left;
             options.PageNumbering.FontFamily = PdfStandardFonts.HelveticaOblique;
             options.PageNumbering.FontSize = 28;
-            options.PageNumbering.FontColor = Color.OrangeRed;
+           
 
             try
             {

@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 using SautinSoft.PdfVision;
-using System.Drawing;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Sample
 {
@@ -13,7 +13,8 @@ namespace Sample
         }
         public static void ConvertSystemDrawingToPdf()
         {
-            System.Drawing.Image image = Image.FromFile(@"..\..\..\image-jpeg.jpg");
+            byte[] image = File.ReadAllBytes(@"..\..\..\image-jpeg.jpg");
+            
             string outFile = new FileInfo(@"Result.pdf").FullName;
 			// Before starting, we recommend to get a free 100-day key:
             // https://sautinsoft.com/start-for-free/
@@ -27,24 +28,10 @@ namespace Sample
             options.PageSetup.PaperType = PaperType.Auto;
 
 
-            byte[] imgBytes = null;
+            byte[] pdfDocument = v.ConvertImageToPdf(image, options);
+            File.WriteAllBytes(outFile, pdfDocument);
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(outFile) { UseShellExecute = true });
 
-            using (MemoryStream ms = new System.IO.MemoryStream())
-            {
-                image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                imgBytes = ms.ToArray();
-            }
-
-            try
-            {
-                v.ConvertImageToPdf(imgBytes, outFile, options);
-                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(outFile) { UseShellExecute = true });
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-                Console.ReadLine();
-            }
         }
     }
 }
