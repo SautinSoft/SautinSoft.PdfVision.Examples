@@ -16,7 +16,7 @@ namespace Sample
             string inpFile = Path.GetFullPath(@"..\..\..\example.html");
             string inpHtml = File.ReadAllText(inpFile);
             byte[] imgBytes = null;
-			// Before starting, we recommend to get a free 100-day key:
+			// Before starting, we recommend to get a free key:
             // https://sautinsoft.com/start-for-free/
             
             // Apply the key here:

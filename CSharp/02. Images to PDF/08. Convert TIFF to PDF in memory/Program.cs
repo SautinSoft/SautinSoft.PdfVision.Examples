@@ -17,7 +17,7 @@ namespace Sample
             // The converting process will be done completely in memory.
             string inpFile = Path.GetFullPath(@"..\..\..\image-tiff.tiff");
             string outFile = new FileInfo(@"Result.pdf").FullName;
-			// Before starting, we recommend to get a free 100-day key:
+			// Before starting, we recommend to get a free key:
             // https://sautinsoft.com/start-for-free/
             
             // Apply the key here:

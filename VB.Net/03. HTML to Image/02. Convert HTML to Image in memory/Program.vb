@@ -13,7 +13,7 @@ Namespace Sample
 			Dim inpFile As String = Path.GetFullPath("..\..\..\example.html")
 			Dim inpHtml As String = File.ReadAllText(inpFile)
 			Dim imgBytes() As Byte = Nothing
-			' Before starting, we recommend to get a free 100-day key:
+			' Before starting, we recommend to get a free key:
             ' https://sautinsoft.com/start-for-free/
             
             ' Apply the key here:

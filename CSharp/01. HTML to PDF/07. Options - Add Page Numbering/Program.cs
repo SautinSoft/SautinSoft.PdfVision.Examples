@@ -15,7 +15,7 @@ namespace Sample
             // Let's convert HTML to PDF and add page numbering in header.
             string inpFile = File.ReadAllText(@"..\..\..\example.html");
             string outFile = new FileInfo("Result.pdf").FullName;
-			// Before starting, we recommend to get a free 100-day key:
+			// Before starting, we recommend to get a free key:
             // https://sautinsoft.com/start-for-free/
             
             // Apply the key here:
