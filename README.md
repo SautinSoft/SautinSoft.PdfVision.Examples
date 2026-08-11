@@ -22,7 +22,7 @@
 ## System Requirement
 
 * .NET Framework 4.6.1 - 4.8.1
-* .NET Core 2.0 - 3.1, .NET 5, 6, 7, 9, 10
+* .NET Core 2.0 - 3.1, .NET 5, 6, 7, 9, 10, 11
 * .NET Standard 2.0
 * Windows, Linux, macOS, Android, iOS.
 
